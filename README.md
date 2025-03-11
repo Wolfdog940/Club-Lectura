@@ -144,7 +144,27 @@ Este proyecto utiliza **Django** junto con **Django REST Framework** para constr
 Aquí tienes un enlace a un video que te explica cómo configurar un proyecto Django con MySQL:
 - [Configuración de Django con MySQL](https://www.youtube.com/watch?v=7zKjqw7w7yM)
 
----
+---# Proyecto
+
+Este proyecto sigue una estrategia de ramas basada en GitFlow.
+
+## Flujo de trabajo
+
+1. **Crear ramas desde `develop`:**
+   - Siempre que vayas a trabajar en una nueva funcionalidad o corrección, crea una rama desde `develop`.
+   - El nombre de la rama debe ser descriptivo, por ejemplo: `feature/nueva-funcionalidad` o `bugfix/correccion-error`.
+
+2. **Subir cambios a la rama remota:**
+   - Una vez hayas realizado tus cambios y los hayas probado localmente, sube los cambios a la rama remota correspondiente. 
+   - Usa el siguiente comando para subir tus cambios:
+     ```bash
+     git push origin nombre-de-tu-rama
+     ```
+
+3. **Hacer pull a `master`:**
+   - Cuando todos los cambios de tu rama hayan sido aprobados y estén listos para ser integrados, realiza un 
+
+
 
 
 
