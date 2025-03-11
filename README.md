@@ -148,6 +148,10 @@ Aquí tienes un enlace a un video que te explica cómo configurar un proyecto Dj
 
 Este proyecto sigue una estrategia de ramas basada en GitFlow.
 
+# Proyecto
+
+Este proyecto sigue una estrategia de ramas basada en GitFlow.
+
 ## Flujo de trabajo
 
 1. **Crear ramas desde `develop`:**
@@ -162,9 +166,24 @@ Este proyecto sigue una estrategia de ramas basada en GitFlow.
      ```
 
 3. **Hacer pull a `master`:**
-   - Cuando todos los cambios de tu rama hayan sido aprobados y estén listos para ser integrados, realiza un 
+   - Cuando todos los cambios de tu rama hayan sido aprobados y estén listos para ser integrados, realiza un pull request desde tu rama hacia `master`.
+   - Asegúrate de que todos los tests pasan y que el código está correctamente revisado antes de hacer el merge.
 
+4. **Después del merge:**
+   - Una vez el pull request haya sido fusionado en `master`, asegúrate de actualizar tu rama `develop` localmente con los últimos cambios de `master`:
+     ```bash
+     git checkout develop
+     git pull origin develop
+     git merge master
+     ```
 
+## Buenas prácticas
 
+- **Commits pequeños y frecuentes:** Realiza commits pequeños y descriptivos para mantener un historial limpio.
+- **Pruebas locales:** Asegúrate de probar tus cambios de manera local antes de subirlos a la rama remota.
+- **Revisión de código:** Antes de hacer un pull request, asegúrate de que tu código esté limpio y bien documentado.
 
+## Notas
 
+- En este flujo de trabajo, la rama `master` siempre debe reflejar una versión estable del proyecto.
+- `develop` se utiliza para integrar las nuevas funcionalidades antes de su despliegue en producción.
