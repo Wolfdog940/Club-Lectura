@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'usuarios', # Agrega la aplicación de usuarios
+    'usuarios',
+    'libros',
 ]
 
 MIDDLEWARE = [
