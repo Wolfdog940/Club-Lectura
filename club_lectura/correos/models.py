@@ -23,6 +23,9 @@ class Correo(models.Model):
     class Meta:
         verbose_name = 'Correo'
         verbose_name_plural = 'Correos'
+
+    def get_plantilla(nombre):
+        return Plantilla.objects.get(nombre=nombre).first()
     
     def __str__(self):
         return self.asunto
