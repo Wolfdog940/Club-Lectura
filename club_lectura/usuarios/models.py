@@ -9,7 +9,8 @@ class Detalle_usuario(models.Model):
     fecha_nacimiento = models.DateField(null=True, blank=True)
     generos = models.ManyToManyField(Genero, related_name='generos_usuario')
     libros = models.ForeignKey(libro_usuario, related_name='libros_usuario', on_delete=models.CASCADE, null=True, blank=True)
-    
+    accepta_notificaciones = models.BooleanField(default=True)
+
     class Meta:
         verbose_name = 'Detalle de Usuario'
         verbose_name_plural = 'Detalles de Usuarios'
