@@ -1,10 +1,8 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User
 from .models import (
     Resena, Autor, Genero, Saga, Libro, Estado_libro, 
     libro_usuario, libro_grupo
 )
-from usuarios.models import Grupo  # Importa el modelo de Grupo
 
 class ResenaSerializer(serializers.ModelSerializer):
     class Meta:

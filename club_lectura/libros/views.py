@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from .models import Resena, Autor, Genero, Saga, Libro, Estado_libro, libro_usuario, libro_grupo
-from .serializer import ResenaSerializer, AutorSerializer, GeneroSerializer, SagaSerializer, LibroSerializer, EstadoLibroSerializer, UserSerializer, LibroUsuarioSerializer, LibroGrupoSerializer
+from .serializer import ResenaSerializer, AutorSerializer, GeneroSerializer, SagaSerializer, LibroSerializer, EstadoLibroSerializer, LibroUsuarioSerializer, LibroGrupoSerializer
 from rest_framework.permissions import IsAuthenticated
 
 class ResenaViewSet(viewsets.ModelViewSet):

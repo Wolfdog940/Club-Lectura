@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from libros.models import Genero, libro_grupo, libro_usuario
 from .models import Detalle_usuario, Amistad, Notificaciones_amistad, Grupo
 
 class UserSerializer(serializers.ModelSerializer):

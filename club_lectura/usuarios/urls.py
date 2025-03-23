@@ -4,7 +4,7 @@ from .views import UsuarioViewSet, DetalleUsuarioViewSet, AmistadViewSet, Notifi
 
 router = DefaultRouter()
 router.register(r'usuarios', UsuarioViewSet)
-router.register(r'detalle_usuario', DetalleUsuarioViewSet)
+router.register(r'detalle_usuario', DetalleUsuarioViewSet, basename='detalleusuario')
 router.register(r'amistad', AmistadViewSet)
 router.register(r'notificaciones_amistad', NotificacionesAmistadViewSet)
 router.register(r'grupo', GrupoViewSet)
