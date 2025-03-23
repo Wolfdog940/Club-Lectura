@@ -29,11 +29,6 @@ class SagaSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class LibroSerializer(serializers.ModelSerializer):
-    autor = AutorSerializer()
-    genero = GeneroSerializer()
-    saga = SagaSerializer()
-    resena = ResenaSerializer()
-
     class Meta:
         model = Libro
         fields = '__all__'
@@ -43,11 +38,12 @@ class EstadoLibroSerializer(serializers.ModelSerializer):
         model = Estado_libro
         fields = '__all__'
 
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ['id', 'username', 'email', 'first_name', 'last_name']
-
 class LibroUsuarioSerializer(serializers.ModelSerializer):
-    libro = LibroSerializer()
-    usuario = UserSerializer()
+    class Meta:
+        model = libro_usuario
+        fields = '__all__'
+
+class LibroGrupoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = libro_grupo
+        fields = '__all__'

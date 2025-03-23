@@ -9,8 +9,6 @@ class Resena(models.Model):
     def __str__(self):
         return f"Reseña {self.id} - {self.calificacion}/5"
 
-
-
 class Autor(models.Model):
     nombre = models.CharField(max_length=50)
     biografia = models.TextField()
@@ -104,3 +102,5 @@ class libro_grupo(models.Model):
         verbose_name = 'Libro de Grupo'
         verbose_name_plural = 'Libros de Grupos'
 
+    def __str__(self):
+        return f"{self.libro.titulo} - {self.grupo.nombre}"
